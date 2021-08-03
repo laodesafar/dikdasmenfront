@@ -19,7 +19,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-yellow-300 to-gray-700 h-screen">
+    <div>
       <div className="bg-green-500 w-full h-6"></div>
       <nav>
         <div className="container mx-auto">
@@ -102,7 +102,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="ml-4">
+            <div className="ml-10">
               <a href="">
                 <BiSearch className="text-xl" />
               </a>
@@ -110,7 +110,30 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <div className="py-4 bg-green-600"></div>
+      <section className="h-[80vh] relative max-h-[80vh] overflow-hidden  -z-10 ">
+        <div className=" relative max-h-[80vh] h-[80vh] ">
+          <img
+            className="align-middle object-cover  max-w-full w-full h-full  block md:hidden "
+            src="/assets/images/cover-video.jpg"
+            alt=""
+          />
+          <video
+            id="videoBG"
+            className=" align-baseline -z-10 hidden md:block min-w-full w-full h-full object-cover object-center"
+            autoPlay
+            muted
+            loop
+            poster="/assets/images/cover-video.jpg"
+          >
+            <source src="/assets/videos/dikdasmen.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute top-1/2 w-screen text-center">
+            <h1 className="text-white text-5xl font-semibold  uppercase">
+              DIKDASMEN YBWSA
+            </h1>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
