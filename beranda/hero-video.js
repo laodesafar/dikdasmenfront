@@ -1,11 +1,9 @@
-import { Fragment } from "react";
+import "tailwindcss/tailwind.css";
 
 export default function HeroVideo() {
   return (
-    <Fragment>
-      <section className="h-screen mx-auto">
-        <h1>Disini Section Hero Video</h1>
-      </section>
-    </Fragment>
+    <section className="mx-auto text-red-800">
+      <h1 className="text-red-900">Disini Section Hero Video</h1>
+    </section>
   );
 }
