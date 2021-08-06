@@ -1,8 +1,13 @@
 import React from "react";
+import Image from "next/image";
 
 import { BiChevronRight } from "react-icons/bi";
 import ButtonLengkap from "../UI/ButtonLengkap";
 import CardBerita from "../UI/CardBerita";
+
+const imageLoader = ({ src, width, quality }) => {
+  return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
+};
 
 export default function RilisBerita() {
   return (
@@ -19,9 +24,13 @@ export default function RilisBerita() {
             <div className="col-span-3">
               <div className="w-full flex rounded-xl shadow-xl hover:shadow-md transition-shadow duration-300 ">
                 <div className="w-5/12 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
-                  <img
+                  <Image
                     className=" rounded-l-xl  w-full"
-                    src="http://unissula.ac.id/wp-content/uploads/2021/07/31-Prof-Topik-1024x577.jpeg"
+                    loader={imageLoader}
+                    src="assets/images/contoh.jpg"
+                    alt="Picture of the author"
+                    width={640}
+                    height={361}
                   />
                 </div>
                 <div className=" bg-gray-100 rounded-r-xl  py-6 px-5 flex flex-col  leading-normal">
@@ -64,6 +73,7 @@ export default function RilisBerita() {
                       src="https://pbs.twimg.com/profile_images/885868801232961537/b1F6H4KC_400x400.jpg"
                       alt="Avatar of Jonathan Reinink"
                     />
+
                     <div className="text-sm">
                       <p className="text-gray-500 leading-none">
                         <a href="#" className="hover:text-green-500">
@@ -79,11 +89,8 @@ export default function RilisBerita() {
                   </div>
                 </div>
               </div>
+              <CardBerita title="Card Contoh 1" />
             </div>
-
-            <CardBerita />
-            <CardBerita />
-            <CardBerita />
           </div>
           <button className="text-base bg-teal-500 py-2 px-6 text-white rounded-sm shadow-lg block mx-auto mt-6 hover:shadow-sm transition-shadow hover:bg-teal-600">
             Berita Lainnya
