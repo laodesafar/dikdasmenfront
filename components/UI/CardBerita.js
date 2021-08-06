@@ -6,14 +6,14 @@ export default function CardBerita(props) {
   return (
     <div className=" bg-gray-100 rounded-xl shadow-xl hover:shadow-md transition-shadow">
       <Image
-        className="w-10 h-10 rounded-full mr-4"
+        className="rounded-t-xl"
         loader={props.loader}
         src={props.src}
         alt={props.title}
         width={props.width}
         height={props.height}
       />
-      <div className="p-4">
+      <div className="p-2">
         <p className="text-green-700 font-semibold text-base mt-2">
           <a href="#" className="hover:text-green-500">
             {props.tags}

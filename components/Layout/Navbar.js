@@ -24,7 +24,7 @@ export default function Navbar() {
     <Fragment>
       <div className="bg-green-500 w-full h-6"></div>
       <nav>
-        <div className="container mx-auto">
+        <div className="container   mx-auto">
           <div className="flex items-center ">
             <div className=" py-3 ">
               <Logo />
