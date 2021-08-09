@@ -77,7 +77,7 @@ export default function RilisBerita() {
           />
         ))}
         <div className="col-span-3 mx-auto">
-          <ButtonLengkap>Berita Lainnya</ButtonLengkap>
+          <ButtonLengkap variant="green-button">Berita Lainnya</ButtonLengkap>
         </div>
       </div>
     </div>

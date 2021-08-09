@@ -22,7 +22,7 @@ export default function InforPost({ tags, date, title, description }) {
       </p>
 
       <div className="mt-2 md:block hidden">...</div>
-      <ButtonLengkap className="mt-2 md:block hidden">
+      <ButtonLengkap variant="default" className="mt-2 md:block hidden">
         Selengkapnya
       </ButtonLengkap>
     </>
