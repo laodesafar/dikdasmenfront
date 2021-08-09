@@ -1,35 +1,29 @@
-import { BiChevronRight } from "react-icons/bi";
-import ButtonLengkap from "../UI/ButtonLengkap";
 import Image from "next/image";
 
-export default function CardBerita(props) {
+import InforPost from "@components/Layout/InforPost";
+
+export default function CardBerita({
+  description,
+  loader,
+  width,
+  height,
+  src,
+  ...infoPost
+}) {
   return (
-    <div className=" bg-gray-100 rounded-xl shadow-xl hover:shadow-md transition-shadow">
-      <Image
-        className="rounded-t-xl"
-        loader={props.loader}
-        src={props.src}
-        alt={props.title}
-        width={props.width}
-        height={props.height}
-      />
-      <div className="p-2">
-        <p className="text-green-700 font-semibold text-base mt-2">
-          <a href="#" className="hover:text-green-500">
-            {props.tags}
-          </a>
-        </p>
-
-        <h1 className="font-semibold text-gray-700 leading-none text-xl mt-1 mb-5 capitalize ">
-          <a href="#">{props.title}</a>
-        </h1>
-
-        <div className="mb-5">
-          <ButtonLengkap>
-            Selengkapnya <BiChevronRight className="w-6 h-6" />
-          </ButtonLengkap>
-        </div>
+    <article className="bg-gray-100  shadow-md mt-4">
+      <div className="hidden md:block">
+        <Image
+          src={src}
+          alt={infoPost.title}
+          loader={loader}
+          width={width}
+          height={height}
+        />
       </div>
-    </div>
+      <div className="py-4 px-6">
+        <InforPost {...infoPost} />
+      </div>
+    </article>
   );
 }
