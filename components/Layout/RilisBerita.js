@@ -47,7 +47,7 @@ export default function RilisBerita() {
       <article className="absolute w-full sm:relative  md:w-auto md:relative h-56 md:h-[450px] lg:min-h-[340px] lg:h-auto mb-14 lg:mb-8 shadow-lg bg-gray-100">
         <div className="lg:absolute  lg:w-[512px]  lg:right-auto lg:h-[340px] ">
           <Image
-            className="relative"
+            className="relative rounded-md lg:rounded-r-none"
             loader={imageLoader}
             src="assets/images/contoh.jpg"
             alt="Picture of the author"
@@ -55,7 +55,7 @@ export default function RilisBerita() {
             layout="fill"
           />
         </div>
-        <div className="relative md:absolute lg:left-[512px] bottom-[-100%] bg-gray-100  md:w-[80%]  p-6 lg:p-8 md:-bottom-8 lg:bottom-0 lg:top-0 md:left-1/2  md:-translate-x-1/2 shadow-md  lg:w-auto lg:transform-none">
+        <div className="relative md:absolute rounded-md lg:rounded-l-none lg:left-[512px] bottom-[-100%] bg-gray-100  md:w-[80%]  p-6 lg:p-8 md:-bottom-8 lg:bottom-0 lg:top-0 md:left-1/2  md:-translate-x-1/2 shadow-md  lg:w-auto lg:transform-none">
           <InforPost
             tags="berita"
             date="7 Agustus 2021"
