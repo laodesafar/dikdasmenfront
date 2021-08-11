@@ -7,6 +7,8 @@
     "watch:css": "postcss -w styles/tailwind.css -o styles/globals.css"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.2.0",
+    "google-map-react": "^2.1.10",
     "next": "latest",
     "postcss-cli": "^8.3.1",
     "react": "^17.0.2",
