@@ -4,15 +4,15 @@ import { BiChevronRight } from "react-icons/bi";
 
 export default function ButtonLengkap({ className, children, variant }) {
   const variants = {
-    default: `text-green-500 hover:text-green-700`,
-    "white-button": `text-green-500 px-4 py-2 bg-white hover:bg-gray-200`,
-    "green-button": `text-white px-4 py-2 bg-green-500 hover:bg-green-700 `,
+    default: `text-green-500 hover:text-green-700 transition-bg`,
+    "white-button": ` bg-green-500 py-2 px-6 border-white border-2 border-solid text-white rounded-sm shadow-lg mt-6  transition-bg hover:bg-green-600`,
+    "green-button": `text-white py-2 px-6 bg-green-500 transition-bg hover:bg-green-700 rounded-sm `,
   };
 
   const variantHandler = variants[variant];
 
   return (
-    <div className={className}>
+    <button className={className}>
       <a
         href="#"
         className={`flex items-center text-sm md:text-base
@@ -21,6 +21,6 @@ export default function ButtonLengkap({ className, children, variant }) {
         {children}{" "}
         {variant === "default" && <BiChevronRight className="w-6 h-6" />}
       </a>
-    </div>
+    </button>
   );
 }

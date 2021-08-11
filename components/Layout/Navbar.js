@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 
 import Logo from "../UI/Logo";
 import Modal from "../UI/Modal";
@@ -10,29 +10,31 @@ export default function Navbar() {
   const [showModal, setShowModal] = useState(false);
 
   const tentangList = [
-    { text: "Sejarah", href: "#" },
-    { text: "Visi dan Misi", href: "#" },
-    { text: "Struktur Organisasi", href: "#" },
-    { text: "Staf Dikdasmen", href: "#" },
+    { text: "Sejarah", href: "/tentang/sejarah" },
+    { text: "Visi dan Misi", href: "/tentang/visimisi" },
+    { text: "Struktur Organisasi", href: "/tentang/struktur" },
+    { text: "Staf Dikdasmen", href: "/tentang/staf" },
   ];
 
   const galeriList = [
-    { text: "Foto", href: "#" },
-    { text: "Video", href: "#" },
+    { text: "Foto", href: "/galeri/foto" },
+    { text: "Video", href: "/galeri/video" },
   ];
+
   return (
     <Fragment>
       <div className="bg-green-500 w-full h-6"></div>
-      <nav>
-        <div className="container   mx-auto">
+
+      <nav className="sticky top-0 bg-white z-100 shadow-lg">
+        <div className="container    mx-auto">
           <div className="flex items-center ">
-            <div className=" py-3 ">
+            <div className=" py-3">
               <Logo />
             </div>
             <div className="ml-auto">
               <ul className="flex space-x-10 items-center  ">
                 <li>
-                  <a href="" className="text-green-500 py-6 ">
+                  <a href="/" className="text-green-500 py-6 ">
                     Beranda
                   </a>
                 </li>
@@ -67,7 +69,7 @@ export default function Navbar() {
                   )}
                 </li>
                 <li>
-                  <a href="" className="hover:text-green-500 py-6">
+                  <a href="/pendidikan" className="hover:text-green-500 py-6">
                     Pendidikan
                   </a>
                 </li>
@@ -102,7 +104,7 @@ export default function Navbar() {
                   )}
                 </li>
                 <li>
-                  <a href="" className="hover:text-green-500 py-6">
+                  <a href="/kontak" className="hover:text-green-500 py-6">
                     Kontak
                   </a>
                 </li>

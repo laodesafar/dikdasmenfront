@@ -11,7 +11,7 @@ export default function CardBerita({
   ...infoPost
 }) {
   return (
-    <article className="bg-gray-100  rounded-md shadow-lg hover:shadow-xl mt-4">
+    <article className="bg-gray-100  rounded-md shadow-lg mt-4">
       <div className="hidden md:block ">
         <Image
           className="rounded-t-lg"

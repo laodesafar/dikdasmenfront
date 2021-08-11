@@ -5,12 +5,12 @@ import { BiBuildings, BiGroup, BiUser } from "react-icons/bi";
 export default function Pendidikan() {
   return (
     <section
-      className="flex relative max-h-[30rem] bg-gray-100 py-4 mt-16"
+      className="flex relative max-h-[30rem] bg-gray-100 py-4 mt-28"
       id="pendidikan"
     >
       <div className="container relative mx-auto">
         <img
-          className="absolute left-20 -top-24  w-2/6"
+          className="absolute left-20 -top-24 w-2/6"
           src="assets/images/pendidikan.png"
           alt=""
         />
@@ -25,15 +25,15 @@ export default function Pendidikan() {
               </h1>
 
               <div className="max-w-full">
-                <p className="text-base font-medium tracking-wide text-gray-500 mt-1 hidden lg:block">
+                <p className="text-base font-normal tracking-wide text-gray-500 mt-1 hidden lg:block">
                   Bidang pendidikan dasar dan menengah Yayasan Badan Wakaf
                   Sultan Agung memiliki 11 sekolah yang menyelengarakan
                   pendidikan dari tingkat dasar hingga tingkat menengah atas.
                 </p>
               </div>
             </div>
-            <div className="h-full"></div>
-            <div className="mb-3 max-w-[10rem]">
+
+            <div className="mt-6 max-w-[10rem]">
               <ButtonLengkap variant="green-button">Selengkapnya</ButtonLengkap>
             </div>
           </div>

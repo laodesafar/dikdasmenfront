@@ -12,12 +12,12 @@ export default function InforPost({ tags, date, title, description }) {
         <span>&bull;</span>
         <div>{date}</div>
       </div>
-      <h3 className="text-gray-700 font-bold lg:text-xl text-lg max-h-20 md:max-h-14 overflow-hidden mb-1 mt-3 md:mb-5">
-        <a href="" className="hover:text-green-500">
+      <h3 className="text-gray-700 font-bold lg:text-xl text-lg max-h-20 md:max-h-14 overflow-hidden mb-1 mt-3 md:mb-5 ">
+        <a href="" className="hover:text-green-500 ">
           {title}
         </a>
       </h3>
-      <p className="lg:text-base text-sm tracking-wide hidden md:block  md:mb-4 text-gray-500 mt-1">
+      <p className="lg:text-base text-sm tracking-wide hidden md:block font-normal md:mb-4 text-gray-500 mt-1">
         {description}
       </p>
 
