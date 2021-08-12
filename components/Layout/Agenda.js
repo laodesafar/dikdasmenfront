@@ -4,8 +4,8 @@ import ButtonLengkap from "@components/UI/ButtonLengkap";
 
 export default function Agenda() {
   return (
-    <section className="flex mt-10 shadow-md">
-      <div className="container mx-auto bg-gray-100 rounded-lg px-4 py-6">
+    <section className="flex mt-10 ">
+      <div className="container mx-auto bg-gray-100 rounded-lg px-4 py-6 shadow-md  ">
         <h1 className="text-center capitalize text-2xl py-4 font-semibold text-green-500">
           Agenda Mendatang
         </h1>

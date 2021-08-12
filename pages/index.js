@@ -5,6 +5,7 @@ import Pendidikan from "@components/Layout/Pendidikan";
 import Sambutan from "@components/Layout/Sambutan";
 import Agenda from "@components/Layout/Agenda";
 import Footer from "@components/Layout/Footer";
+import Testimonial from "@components/Layout/Testimonial";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Pendidikan />
       <Sambutan />
       <Agenda />
+      <Testimonial />
       <Footer />
     </>
   );
