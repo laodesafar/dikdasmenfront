@@ -12,35 +12,45 @@ export default function Agenda() {
 
         <div className="grid grid-cols-3 gap-6 py-6">
           <div className="card flex flex-row ">
-            <div className="w-24 h-24  py-2 bg-green-500 text-center rounded-md flex-shrink-0">
-              <h1 className="text-white font-semibold text-5xl ">18</h1>
+            <div className="max-h-28 p-2 bg-green-500 text-center rounded-md flex-shrink-0">
+              <h1 className="text-white font-semibold text-3xl ">18</h1>
               <p className="text-yellow-300 text-2xl capitalize">Feb</p>
+              <p className="text-white text-2xl font-medium capitalize">2021</p>
             </div>
-            <div className="ml-4 text-gray-600">
+            <div className="ml-4 text-gray-600 font-normal">
+              <h1 className="text-green-500 font-medium text-xl">
+                Workshop Parenting
+              </h1>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
               tenetur perferendis ullam earum magnam neque nisi qui adipisci
               iusto placeat.
             </div>
           </div>
-
-          <div className="card flex flex-row  ">
-            <div className="w-24 h-24  py-2 bg-green-500 text-center rounded-md flex-shrink-0">
-              <h1 className="text-white font-semibold text-5xl ">18</h1>
+          <div className="card flex flex-row ">
+            <div className="max-h-28 p-2 bg-green-500 text-center rounded-md flex-shrink-0">
+              <h1 className="text-white font-semibold text-3xl ">18</h1>
               <p className="text-yellow-300 text-2xl capitalize">Feb</p>
+              <p className="text-white text-2xl font-medium capitalize">2021</p>
             </div>
-            <div className="ml-4 text-gray-600">
+            <div className="ml-4 text-gray-600 font-normal">
+              <h1 className="text-green-500 font-medium text-xl">
+                Workshop Parenting
+              </h1>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
               tenetur perferendis ullam earum magnam neque nisi qui adipisci
               iusto placeat.
             </div>
           </div>
-
-          <div className="card flex flex-row  ">
-            <div className="w-24 h-24  py-2 bg-green-500 text-center rounded-md flex-shrink-0">
-              <h1 className="text-white font-semibold text-5xl ">18</h1>
+          <div className="card flex flex-row ">
+            <div className="max-h-28 p-2 bg-green-500 text-center rounded-md flex-shrink-0">
+              <h1 className="text-white font-semibold text-3xl ">18</h1>
               <p className="text-yellow-300 text-2xl capitalize">Feb</p>
+              <p className="text-white text-2xl font-medium capitalize">2021</p>
             </div>
-            <div className="ml-4 text-gray-600 font-light">
+            <div className="ml-4 text-gray-600 font-normal">
+              <h1 className="text-green-500 font-medium text-xl">
+                Workshop Parenting
+              </h1>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
               tenetur perferendis ullam earum magnam neque nisi qui adipisci
               iusto placeat.

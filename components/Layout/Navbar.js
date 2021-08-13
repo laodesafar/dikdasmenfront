@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState, useEffect, useRef } from "react";
 
 import Logo from "../UI/Logo";
 import Modal from "../UI/Modal";
@@ -23,21 +23,18 @@ export default function Navbar() {
 
   return (
     <Fragment>
-      <div className="bg-green-500 w-full h-6"></div>
+      <div className="bg-green-500 w-full z-100 h-6"></div>
 
       <nav className="sticky top-0 bg-white z-100 shadow-lg">
         <div className="container    mx-auto">
           <div className="flex items-center ">
             <div className=" py-3">
-              <Logo />
+              <a href="/">
+                <Logo />
+              </a>
             </div>
             <div className="ml-auto">
               <ul className="flex space-x-10 items-center  ">
-                <li>
-                  <a href="/" className="text-green-500 py-6 ">
-                    Beranda
-                  </a>
-                </li>
                 <li
                   className="relative"
                   onMouseEnter={() => setDropdown(true)}
@@ -45,7 +42,7 @@ export default function Navbar() {
                 >
                   <a
                     href="#"
-                    className="hover:text-green-500 pointer py-6 flex items-center "
+                    className="hover:text-green-500 pointer py-6 flex items-center transition-colors duration-300 ease-in-out "
                   >
                     Tentang <BiChevronDown />
                   </a>
@@ -59,7 +56,7 @@ export default function Navbar() {
                           <a
                             href={href}
                             className="flex py-3 px-6 bg-gray-50
-                          hover:text-green-500 "
+                          hover:text-green-500 transition-colors duration-300 ease-in-out "
                           >
                             {text}
                           </a>
@@ -69,7 +66,10 @@ export default function Navbar() {
                   )}
                 </li>
                 <li>
-                  <a href="/pendidikan" className="hover:text-green-500 py-6">
+                  <a
+                    href="/pendidikan"
+                    className="hover:text-green-500 py-6 transition-colors duration-300 ease-in-out"
+                  >
                     Pendidikan
                   </a>
                 </li>
@@ -80,7 +80,7 @@ export default function Navbar() {
                 >
                   <a
                     href=""
-                    className="hover:text-green-500 py-6 flex items-center"
+                    className="hover:text-green-500 py-6 flex items-center transition-colors duration-300 ease-in-out"
                   >
                     Galeri <BiChevronDown />
                   </a>
@@ -94,7 +94,7 @@ export default function Navbar() {
                           <a
                             href={href}
                             className="flex py-3 px-6 bg-gray-50
-                             hover:text-green-500 "
+                             hover:text-green-500 transition-colors duration-300 ease-in-out"
                           >
                             {text}
                           </a>
@@ -104,13 +104,16 @@ export default function Navbar() {
                   )}
                 </li>
                 <li>
-                  <a href="/kontak" className="hover:text-green-500 py-6">
+                  <a
+                    href="/kontak"
+                    className="hover:text-green-500 py-6 transition-colors duration-300 ease-in-out"
+                  >
                     Kontak
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="ml-10 cursor-pointer hover:text-green-500">
+            <div className="ml-10 cursor-pointer hover:text-green-500 transition-colors duration-300 ease-in-out">
               <a onClick={() => setShowModal(!showModal)}>
                 <BiSearch className="text-xl" />
               </a>
@@ -127,7 +130,7 @@ export default function Navbar() {
                         <BiSearch className="font-bold cursor-pointer" />
                         <BiX
                           onClick={() => setShowModal(!showModal)}
-                          className="h-16 w-16 cursor-pointer hover:text-red-500 "
+                          className="h-16 w-16 cursor-pointer hover:text-red-500 transition-colors duration-300 ease-in-out "
                         />
                       </div>
                     </form>
