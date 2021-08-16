@@ -41,13 +41,11 @@ export default function Navbar() {
               <ul className="flex space-x-10 items-center  ">
                 <li
                   className="relative"
+                  onClick={() => setDropdown(!dropdown)}
                   onMouseEnter={() => setDropdown(true)}
                   onMouseLeave={() => setDropdown(false)}
                 >
-                  <a
-                    href="#"
-                    className="hover:text-green-500 pointer py-6 flex items-center transition-colors duration-300 ease-in-out "
-                  >
+                  <a className="hover:text-green-500 cursor-pointer py-6 flex items-center transition-colors duration-300 ease-in-out ">
                     Tentang <BiChevronDown />
                   </a>
                   {dropdown && (
@@ -79,13 +77,11 @@ export default function Navbar() {
                 </li>
                 <li
                   className="relative"
+                  onClick={() => setDropdownGaleri(!dropdownGaleri)}
                   onMouseEnter={() => setDropdownGaleri(true)}
                   onMouseLeave={() => setDropdownGaleri(false)}
                 >
-                  <a
-                    href=""
-                    className="hover:text-green-500 py-6 flex items-center transition-colors duration-300 ease-in-out"
-                  >
+                  <a className="hover:text-green-500 py-6 flex items-center cursor-pointer transition-colors duration-300 ease-in-out">
                     Galeri <BiChevronDown />
                   </a>
                   {dropdownGaleri && (
