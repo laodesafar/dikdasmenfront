@@ -110,11 +110,11 @@ export default function Pendidikan() {
             </p>
           </div>
         </div>
-        <div className="block">
+        <div className="block mx-5">
           <h2 className="text-2xl capitalize font-semibold my-4 md:mt-10 md:mb-5 lg:text-3xl text-green-500 ">
             Sekolah-Sekolah Bidang Dikdasmen YBWSA
           </h2>
-          <div className="max-w-[60%]">
+          <div className="max-w-full md:max-w-[60%]">
             <p className="text-gray-500 font-medium">
               Bidang Pendidikan Dasar dan Menengah Yayasan Badan Wakaf Sultan
               Agung menyelenggarakan berbagai jenjang pendidikan meliputi KB-TK,

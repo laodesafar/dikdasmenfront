@@ -18,7 +18,9 @@ export default function Home() {
       <Pendidikan />
       <Sambutan />
       <Agenda />
-      <Testimonial />
+      <div className="bg-gray-200 py-4">
+        <Testimonial />
+      </div>
       <Footer />
     </>
   );

@@ -34,7 +34,9 @@ export default function Pendidikan() {
             </div>
 
             <div className="mt-6 max-w-[10rem]">
-              <ButtonLengkap variant="green-button">Selengkapnya</ButtonLengkap>
+              <ButtonLengkap variant="green-button" href="/pendidikan">
+                Selengkapnya
+              </ButtonLengkap>
             </div>
           </div>
         </div>

@@ -32,8 +32,8 @@ export default function Kontak(props) {
           </Marker>
         </GoogleMapReact>
       </div>
-      <div className="container relative mx-auto">
-        <div className="absolute  right-0 top-[-22rem] w-3/12 py-6 px-6 bg-gray-100 rounded-md shadow-lg ">
+      <div className="container md:relative mx-auto my-10 md:my-0">
+        <div className="md:absolute mx-auto md:right-0 md:top-[-22rem] w-full md:w-80 py-6 px-6 bg-gray-100 rounded-md shadow-lg ">
           <h1 className="text-center capitalize text-2xl py-4 font-medium text-green-500">
             Hubungi Kami
           </h1>
@@ -59,8 +59,10 @@ export default function Kontak(props) {
                 placeholder="Pesan"
               ></textarea>
             </div>
-            <div className="mt-6">
-              <ButtonLengkap variant="green-button">Kirim Pesan</ButtonLengkap>
+            <div className="mt-6 block w-full">
+              <ButtonLengkap variant="green-button" className="block w-full">
+                Kirim Pesan
+              </ButtonLengkap>
             </div>
           </form>
         </div>
