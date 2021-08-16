@@ -2,26 +2,64 @@ import React from "react";
 
 import { VscQuote } from "react-icons/vsc";
 
-export default function CardTesti() {
+export default function CardTesti({
+  active,
+  src,
+  description,
+  name,
+  status,
+  onHover,
+  index,
+}) {
   return (
-    <div className="flex  flex-col items-center p-2 bg-green-500 ">
+    <div
+      onMouseEnter={onHover}
+      className={`flex  flex-col items-center p-2  transition-all duration-300 ease-in-out cursor-pointer  ${
+        active !== `active${index}` ? "bg-white z-0" : "bg-green-500 z-40"
+      }   shadow-inner min-w-[376px] `}
+    >
       <img
-        className="rounded-full h-32 w-32 my-5"
-        src="/assets/images/image4.png"
-        alt=""
+        className={`rounded-full h-32 w-32 my-5 ${
+          active !== `active${index}` ? "opacity-30" : ""
+        }  `}
+        src={src}
+        alt={name}
       />
-      <div className="px-7 ">
-        <VscQuote className="text-white text-2xl mb-2" />
-        <p className=" font-light text-sm text-white mb-2">
-          Anak saya menjadi lebih mandiri semenjak disekolahkan diSultan Agung
-          lebih baik dan lebih beradab. Semoga ikhtiar Sultan Agung untuk
-          melahirkan generasi khairah ummah diberi kemudahan dan keberkahan.
-          Amin...
+      <div
+        className={`px-7 ${active !== `active${index}` ? "opacity-50" : ""} `}
+      >
+        <VscQuote
+          className={` ${
+            active !== `active${index}` ? "text-gray-400" : "text-white"
+          } text-2xl mb-2  `}
+        />
+        <p
+          className={`font-light text-sm ${
+            active !== `active${index}` ? "text-gray-400" : "text-white"
+          }  mb-2`}
+        >
+          {description}
         </p>
-        <div className="border-b-2 border-yellow-400 "></div>
+        <div
+          className={`border-b-2  ${
+            active !== `active${index}` ? "border-gray-400" : "border-green-400"
+          }   `}
+        ></div>
         <div className="my-2 text-sm font-light">
-          <p className="text-yellow-400 text-lg">Jeff Bezos</p>
-          <p className="text-white">Orangtua Siswa</p>
+          <p
+            className={`text-lg ${
+              active !== `active${index}` ? "text-gray-400" : "text-yellow-400"
+            }  `}
+          >
+            {name}
+          </p>
+          <p
+            className={`${
+              active !== `active${index}` ? "text-gray-400" : "text-white"
+            }  `}
+          >
+            {status}
+          </p>
         </div>
       </div>
     </div>

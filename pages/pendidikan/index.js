@@ -16,80 +16,71 @@ export default function Pendidikan() {
       id: 1,
       title: "KB-TK Islam Sultan Agung 1",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
     {
       id: 2,
       title: "KB-TK Islam Sultan Agung 2",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
     {
       id: 3,
       title: "KB-TK Sultan Agung 4",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
     {
       id: 4,
       title: "Sd Islam Sultan Agung 4",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
     {
       id: 5,
       title: "Sd Islam Sultan Agung 1",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
     {
       id: 6,
       title: "Sd Islam Sultan Agung 2",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
     {
       id: 7,
       title: "Sd Islam Sultan Agung 3",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
     {
       id: 8,
       title: "SMP Islam Sultan Agung 4",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
     {
       id: 9,
       title: "SMP Islam Sultan Agung 1",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
     {
       id: 10,
       title: "SMP Islam Sultan Agung 4",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
     {
       id: 11,
       title: "SMA Islam Sultan Agung 1",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
     {
       id: 12,
       title: "SMA Islam Sultan Agung 3",
       src: "assets/images/contoh.jpg",
-      hover: false,
     },
   ]);
 
+  const [active, setActive] = useState(false);
+
   function hoverHandler(index) {
-    let sekolahBaru = [...daftarSekolah];
-    sekolahBaru[index].hover = !sekolahBaru[index].hover;
-    setDaftarSekolah(sekolahBaru);
+    daftarSekolah[index].title === "SMP Islam Sultan Agung 4"
+      ? setActive(true)
+      : setActive(false);
+    console.log(daftarSekolah[index]);
   }
 
   return (
@@ -140,25 +131,20 @@ export default function Pendidikan() {
                 <div>
                   <a
                     href=""
-                    className="relative h-40 flex items-center justify-center  overflow-hidden rounded-sm"
-                    onMouseEnter={() => hoverHandler(index)}
-                    onMouseLeave={() => hoverHandler(index)}
+                    className="relative group h-40 flex items-center justify-center  overflow-hidden rounded-sm "
                   >
-                    {sekolah.hover && (
-                      <div className="absolute flex items-center justify-center  bg-black/50 h-full w-full z-10 transition-all duration-300 ease-in-out">
-                        <BiPlusCircle className="text-white h-14 w-14 " />
-                      </div>
-                    )}
+                    <div className="absolute flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/50 h-full w-full z-10 transition-all duration-300 ease-in-out">
+                      <BiPlusCircle className="text-white h-14 w-14" />
+                    </div>
+
                     <Image
-                      className={`absolute w-full h-full transition-all duration-300 ease-in-out bg-center  z-0 ${
-                        sekolah.hover ? "scale-150" : ""
-                      }`}
+                      className="absolute w-full h-full transition-transform duration-300 ease-in-out bg-center  z-0 group-hover:scale-150 "
                       loader={imageLoader}
                       src="assets/images/contoh.jpg"
                       alt="Picture of the author"
                       objectFit="cover"
                       layout="fill"
-                    />
+                    ></Image>
                   </a>
                 </div>
                 <div className="mx-3 h-16 -mt-8 flex items-center rounded-sm relative bg-green-600 z-20 text-center transition-colors hover:bg-green-700 ">

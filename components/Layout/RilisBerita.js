@@ -69,7 +69,6 @@ export default function RilisBerita() {
         {berita.map((post) => (
           <CardBerita
             key={post.id}
-            laoder={imageLoader}
             src="/assets/images/contoh.jpg"
             width={512}
             height={340}

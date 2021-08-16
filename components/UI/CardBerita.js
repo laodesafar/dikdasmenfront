@@ -4,7 +4,6 @@ import InforPost from "@components/Layout/InforPost";
 
 export default function CardBerita({
   description,
-  loader,
   width,
   height,
   src,
@@ -17,7 +16,6 @@ export default function CardBerita({
           className="rounded-t-lg"
           src={src}
           alt={infoPost.title}
-          loader={loader}
           width={width}
           height={height}
         />
