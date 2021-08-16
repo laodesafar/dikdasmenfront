@@ -53,7 +53,7 @@ export default function CardTesti({
       <div className="flex flex-col p-7 justify-between bg-white min-h-[400px] py-10 col-span-2  rounded-r-lg">
         <VscQuote />
         <div className="">
-          <p className="font-normal text-base  text-gray-600  mb-4">
+          <p className="font-normal text-base  text-gray-600  mb-4 max-h-36 overflow-hidden">
             {description}
           </p>
           <div className="border-b-2  border-green-500   "></div>
