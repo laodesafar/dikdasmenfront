@@ -4,8 +4,6 @@ import Image from "next/image";
 import Footer from "@components/Layout/Footer";
 import Navbar from "@components/Layout/Navbar";
 
-import ButtonLengkap from "@components/UI/ButtonLengkap";
-import InforPost from "@components/Layout/InforPost";
 import { BiPlusCircle } from "react-icons/bi";
 
 const imageLoader = ({ src, width, quality }) => {
@@ -108,7 +106,7 @@ export default function Pendidikan() {
         />
       </div>
       <div className="container mx-auto">
-        <div className=" mt-[-80vh]  inline-block py-10 px-8 bg-green-600 max-w-[400px]">
+        <div className=" mt-[-80vh]  inline-block py-10 px-8 bg-green-600 max-w-[400px] rounded-md">
           <h1 className="text-5xl capitalize font-semibold   text-yellow-400 ">
             Pendidikan
           </h1>
@@ -142,7 +140,7 @@ export default function Pendidikan() {
                 <div>
                   <a
                     href=""
-                    className="relative h-40 flex items-center justify-center  overflow-hidden "
+                    className="relative h-40 flex items-center justify-center  overflow-hidden rounded-sm"
                     onMouseEnter={() => hoverHandler(index)}
                     onMouseLeave={() => hoverHandler(index)}
                   >
@@ -163,7 +161,7 @@ export default function Pendidikan() {
                     />
                   </a>
                 </div>
-                <div className="mx-3 h-16 -mt-8 flex items-center  relative bg-green-600 z-20 text-center transition-colors hover:bg-green-700 ">
+                <div className="mx-3 h-16 -mt-8 flex items-center rounded-sm relative bg-green-600 z-20 text-center transition-colors hover:bg-green-700 ">
                   <a
                     href=""
                     className=" text-white  overflow-hidden w-full max-h-16"

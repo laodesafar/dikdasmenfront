@@ -1,4 +1,6 @@
-import { Fragment, useState, useEffect, useRef } from "react";
+import { Fragment, useState } from "react";
+
+import Link from "next/link";
 
 import Logo from "../UI/Logo";
 import Modal from "../UI/Modal";
@@ -29,9 +31,11 @@ export default function Navbar() {
         <div className="container    mx-auto">
           <div className="flex items-center ">
             <div className=" py-3">
-              <a href="/">
-                <Logo />
-              </a>
+              <Link href="/">
+                <a>
+                  <Logo />
+                </a>
+              </Link>
             </div>
             <div className="ml-auto">
               <ul className="flex space-x-10 items-center  ">
@@ -53,25 +57,25 @@ export default function Navbar() {
                           key={text}
                           className="first:border-green-500 first:border-t-4"
                         >
-                          <a
-                            href={href}
-                            className="flex py-3 px-6 bg-gray-50
+                          <Link href={href}>
+                            <a
+                              className="flex py-3 px-6 bg-gray-50
                           hover:text-green-500 transition-colors duration-300 ease-in-out "
-                          >
-                            {text}
-                          </a>
+                            >
+                              {text}
+                            </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
                   )}
                 </li>
                 <li>
-                  <a
-                    href="/pendidikan"
-                    className="hover:text-green-500 py-6 transition-colors duration-300 ease-in-out"
-                  >
-                    Pendidikan
-                  </a>
+                  <Link href="/pendidikan">
+                    <a className="hover:text-green-500 py-6 transition-colors duration-300 ease-in-out">
+                      Pendidikan
+                    </a>
+                  </Link>
                 </li>
                 <li
                   className="relative"
@@ -91,25 +95,25 @@ export default function Navbar() {
                           key={text}
                           className="first:border-green-500 first:border-t-4 "
                         >
-                          <a
-                            href={href}
-                            className="flex py-3 px-6 bg-gray-50
-                             hover:text-green-500 transition-colors duration-300 ease-in-out"
-                          >
-                            {text}
-                          </a>
+                          <Link href={href}>
+                            <a
+                              className="flex py-3 px-6 bg-gray-50
+                            hover:text-green-500 transition-colors duration-300 ease-in-out"
+                            >
+                              {text}
+                            </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
                   )}
                 </li>
                 <li>
-                  <a
-                    href="/kontak"
-                    className="hover:text-green-500 py-6 transition-colors duration-300 ease-in-out"
-                  >
-                    Kontak
-                  </a>
+                  <Link href="/kontak">
+                    <a className="hover:text-green-500 py-6 transition-colors duration-300 ease-in-out">
+                      Kontak
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>

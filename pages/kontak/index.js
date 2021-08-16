@@ -45,7 +45,7 @@ export default function Kontak(props) {
                 className="py-2 px-2 block w-full border-none text-gray-600 bg-white rounded-sm shadow-md hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
               />
             </div>
-            <div class="mt-6">
+            <div className="mt-6">
               <input
                 type="email"
                 placeholder="Email"
