@@ -41,7 +41,6 @@ export default function Testimonial() {
 
   const handleActive = (value) => {
     setActive(value);
-    console.log(active);
   };
 
   return (
@@ -49,19 +48,20 @@ export default function Testimonial() {
       <h2 className="text-2xl capitalize font-semibold my-4 md:mt-10 md:mb-5 lg:text-3xl text-green-500 ">
         Kata Mereka Tentang Dikdasmen
       </h2>
-
-      {testimoni.map((testi, index) => (
-        <CardTesti
-          key={testi.id}
-          src={testi.src}
-          description={testi.description}
-          name={testi.name}
-          status={testi.status}
-          active={active}
-          index={index}
-          handleActive={handleActive}
-        />
-      ))}
+      <div className="relative h-[47rem] md:h-96 mb-10">
+        {testimoni.map((testi, index) => (
+          <CardTesti
+            key={testi.id}
+            src={testi.src}
+            description={testi.description}
+            name={testi.name}
+            status={testi.status}
+            active={active}
+            index={index}
+            handleActive={handleActive}
+          />
+        ))}
+      </div>
     </div>
   );
 }

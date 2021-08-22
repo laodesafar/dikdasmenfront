@@ -74,15 +74,6 @@ export default function Pendidikan() {
     },
   ]);
 
-  const [active, setActive] = useState(false);
-
-  function hoverHandler(index) {
-    daftarSekolah[index].title === "SMP Islam Sultan Agung 4"
-      ? setActive(true)
-      : setActive(false);
-    console.log(daftarSekolah[index]);
-  }
-
   return (
     <>
       <Navbar />
@@ -123,7 +114,7 @@ export default function Pendidikan() {
             </p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-24 mt-5">
-            {daftarSekolah.map((sekolah, index) => (
+            {daftarSekolah.map((sekolah) => (
               <div
                 className="bg-gray-100  rounded-md shadow-lg "
                 key={sekolah.id}
@@ -133,8 +124,8 @@ export default function Pendidikan() {
                     href=""
                     className="relative group h-40 flex items-center justify-center  overflow-hidden rounded-sm "
                   >
-                    <div className="absolute flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/50 h-full w-full z-10 transition-all duration-300 ease-in-out">
-                      <BiPlusCircle className="text-white h-14 w-14" />
+                    <div className="absolute flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:scale-150 bg-black/50 h-full w-full z-10 transition-all duration-300 ease-in">
+                      <BiPlusCircle className="text-white h-10 w-10" />
                     </div>
 
                     <Image
@@ -147,7 +138,7 @@ export default function Pendidikan() {
                     ></Image>
                   </a>
                 </div>
-                <div className="mx-3 h-16 -mt-8 flex items-center rounded-sm relative bg-green-600 z-20 text-center transition-colors hover:bg-green-700 ">
+                <div className="mx-3 h-16 -mt-8 flex items-center rounded-sm relative bg-green-600 z-10 text-center transition-colors hover:bg-green-700 ">
                   <a
                     href=""
                     className=" text-white  overflow-hidden w-full max-h-16"

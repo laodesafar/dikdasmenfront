@@ -1,4 +1,5 @@
 import { Fragment, useState } from "react";
+import { Menu, Transition, Dialog } from "@headlessui/react";
 
 import Link from "next/link";
 
@@ -7,8 +8,6 @@ import Modal from "../UI/Modal";
 import { BiSearch, BiChevronDown, BiX } from "react-icons/bi";
 
 export default function Navbar() {
-  const [dropdown, setDropdown] = useState(false);
-  const [dropdownGaleri, setDropdownGaleri] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   const tentangList = [
@@ -24,10 +23,9 @@ export default function Navbar() {
   ];
 
   return (
-    <Fragment>
-      <div className="bg-green-500 w-full z-100 h-6"></div>
-
-      <nav className="sticky top-0 bg-white z-100 shadow-lg">
+    <>
+      <div className="bg-green-500 w-full z-20 h-6"></div>
+      <nav className="sticky top-0 bg-white z-20 shadow-lg">
         <div className="container    mx-auto">
           <div className="flex items-center ">
             <div className=" py-3">
@@ -39,35 +37,40 @@ export default function Navbar() {
             </div>
             <div className="ml-auto">
               <ul className="flex space-x-10 items-center  ">
-                <li
-                  className="relative"
-                  onClick={() => setDropdown(!dropdown)}
-                  onMouseEnter={() => setDropdown(true)}
-                  onMouseLeave={() => setDropdown(false)}
-                >
-                  <a className="hover:text-green-500 cursor-pointer py-6 flex items-center transition-colors duration-300 ease-in-out ">
+                <Menu as="li" className="relative ">
+                  <Menu.Button className="hover:text-green-500 cursor-pointer py-6 flex items-center transition-colors duration-300 ease-in-out outline-none">
                     Tentang <BiChevronDown />
-                  </a>
-                  {dropdown && (
-                    <ul className="absolute w-max min-w-[200px]   ">
+                  </Menu.Button>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute w-max min-w-[200px] outline-none border-green-500 border-t-4 ">
                       {tentangList.map(({ text, href }) => (
-                        <li
-                          key={text}
-                          className="first:border-green-500 first:border-t-4"
-                        >
-                          <Link href={href}>
-                            <a
-                              className="flex py-3 px-6 bg-gray-50
-                          hover:text-green-500 transition-colors duration-300 ease-in-out "
-                            >
-                              {text}
-                            </a>
-                          </Link>
-                        </li>
+                        <Menu.Item key={text}>
+                          {({ active }) => (
+                            <Link href={href}>
+                              <a
+                                className={` ${
+                                  active && "text-green-500"
+                                } flex py-3 px-6 bg-gray-50
+                        hover:text-green-500 transition-colors duration-300 ease-in-out `}
+                              >
+                                {text}
+                              </a>
+                            </Link>
+                          )}
+                        </Menu.Item>
                       ))}
-                    </ul>
-                  )}
-                </li>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+                {/* </li> */}
                 <li>
                   <Link href="/pendidikan">
                     <a className="hover:text-green-500 py-6 transition-colors duration-300 ease-in-out">
@@ -75,35 +78,40 @@ export default function Navbar() {
                     </a>
                   </Link>
                 </li>
-                <li
-                  className="relative"
-                  onClick={() => setDropdownGaleri(!dropdownGaleri)}
-                  onMouseEnter={() => setDropdownGaleri(true)}
-                  onMouseLeave={() => setDropdownGaleri(false)}
-                >
-                  <a className="hover:text-green-500 py-6 flex items-center cursor-pointer transition-colors duration-300 ease-in-out">
+
+                <Menu as="li" className="relative ">
+                  <Menu.Button className="hover:text-green-500 cursor-pointer py-6 flex items-center transition-colors duration-300 ease-in-out outline-none">
                     Galeri <BiChevronDown />
-                  </a>
-                  {dropdownGaleri && (
-                    <ul className="absolute  w-max  min-w-[200px]  ">
+                  </Menu.Button>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute w-max min-w-[200px] outline-none border-green-500 border-t-4 ">
                       {galeriList.map(({ text, href }) => (
-                        <li
-                          key={text}
-                          className="first:border-green-500 first:border-t-4 "
-                        >
-                          <Link href={href}>
-                            <a
-                              className="flex py-3 px-6 bg-gray-50
-                            hover:text-green-500 transition-colors duration-300 ease-in-out"
-                            >
-                              {text}
-                            </a>
-                          </Link>
-                        </li>
+                        <Menu.Item key={text}>
+                          {({ active }) => (
+                            <Link href={href}>
+                              <a
+                                className={` ${
+                                  active && "text-green-500"
+                                } flex py-3 px-6 bg-gray-50
+                        hover:text-green-500 transition-colors duration-300 ease-in-out `}
+                              >
+                                {text}
+                              </a>
+                            </Link>
+                          )}
+                        </Menu.Item>
                       ))}
-                    </ul>
-                  )}
-                </li>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
                 <li>
                   <Link href="/kontak">
                     <a className="hover:text-green-500 py-6 transition-colors duration-300 ease-in-out">
@@ -117,30 +125,51 @@ export default function Navbar() {
               <a onClick={() => setShowModal(!showModal)}>
                 <BiSearch className="text-xl" />
               </a>
-              {showModal && (
-                <Modal>
-                  <div className="absolute top-[40%] w-screen text-center">
-                    <form className="relative max-w-lg mx-auto ">
-                      <input
-                        type="text"
-                        className="pr-40 pb-6 bg-transparent -ml-36 text-white text-5xl border-b-4 border-gray-500  placeholder-white outline-none"
-                        placeholder="Search.."
-                      />
-                      <div className="absolute  flex items-center text-5xl mr-32 top-0 -right-1/2 text-white">
-                        <BiSearch className="font-bold cursor-pointer" />
-                        <BiX
-                          onClick={() => setShowModal(!showModal)}
-                          className="h-16 w-16 cursor-pointer hover:text-red-500 transition-colors duration-300 ease-in-out "
+              <Transition appear show={showModal} as={Fragment}>
+                <Dialog as="div" onClose={() => setShowModal(!showModal)}>
+                  <Transition.Child
+                    as={Fragment}
+                    enter="ease-out duration-300"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="ease-in duration-200"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                  >
+                    <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-80 z-25 w-full min-h-screen" />
+                  </Transition.Child>
+                  <div className="absolute top-[40%] w-screen text-center z-30">
+                    <Transition.Child
+                      as={Fragment}
+                      enter="ease-out duration-300"
+                      enterFrom="opacity-0 scale-95"
+                      enterTo="opacity-100 scale-100"
+                      leave="ease-in duration-200"
+                      leaveFrom="opacity-100 scale-100"
+                      leaveTo="opacity-0 scale-95"
+                    >
+                      <form className="relative max-w-lg mx-auto ">
+                        <input
+                          type="text"
+                          className="pr-40 pb-6 bg-transparent -ml-36 text-white text-5xl border-b-4 border-gray-500  placeholder-white outline-none"
+                          placeholder="Search.."
                         />
-                      </div>
-                    </form>
+                        <div className="absolute  flex items-center text-5xl mr-32 top-0 -right-1/2 text-white">
+                          <BiSearch className="font-bold cursor-pointer" />
+                          <BiX
+                            onClick={() => setShowModal(!showModal)}
+                            className="h-16 w-16 cursor-pointer hover:text-red-500 transition-colors duration-300 ease-in-out "
+                          />
+                        </div>
+                      </form>
+                    </Transition.Child>
                   </div>
-                </Modal>
-              )}
+                </Dialog>
+              </Transition>
             </div>
           </div>
         </div>
       </nav>
-    </Fragment>
+    </>
   );
 }
