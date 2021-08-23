@@ -70,11 +70,11 @@ export default function CardTesti({
               <p className="text-gray-600 font-normal  ">{status}</p>
             </div>
           </div>
-          <div className="flex space-x-4 cursor-pointer">
+          <div className="flex space-x-4 cursor-pointer ">
             {testimoni.map((testi, i) => (
               <div
                 key={i}
-                className={`h-10 w-10 relative transition-transform duration-200 ease-in-out ${
+                className={`h-10 w-10 relative transition-transform duration-200 ease-in-out  ${
                   i === index && active === `active${index}` ? "scale-150" : ""
                 }`}
                 onClick={() => handleActive(`active${i}`)}
@@ -87,11 +87,11 @@ export default function CardTesti({
                 />
               </div>
             ))}
-            <ButtonLengkap variant="default" className="ml-5">
+
+            <ButtonLengkap variant="default" className="relative left-4">
               Selengkapnya
             </ButtonLengkap>
           </div>
-          <div></div>
         </div>
       </div>
     </div>

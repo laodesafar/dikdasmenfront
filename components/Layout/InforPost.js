@@ -3,11 +3,11 @@ import ButtonLengkap from "../UI/ButtonLengkap";
 export default function InforPost({ tags, date, title, description }) {
   return (
     <>
-      <div className="flex items-center text-gray-400 text-sm space-x-2">
+      <div className="flex items-center text-gray-400  text-sm space-x-2">
         <div className="capitalize">
           <a
             href="#"
-            className="hover:text-green-500 transition-colors duration-300 ease-in-out"
+            className="hover:text-green-700 text-green-500 transition-colors duration-300 ease-in-out"
           >
             {tags}
           </a>
@@ -15,10 +15,10 @@ export default function InforPost({ tags, date, title, description }) {
         <span>&bull;</span>
         <div>{date}</div>
       </div>
-      <h3 className="text-gray-700 font-bold lg:text-xl text-lg max-h-20 md:max-h-14 overflow-hidden mb-1 mt-3 md:mb-5 ">
+      <h3 className="text-green-500 font-bold lg:text-xl text-lg max-h-20 md:max-h-14 overflow-hidden mb-1 mt-3 md:mb-5 ">
         <a
           href=""
-          className="hover:text-green-500 transition-colors duration-300 ease-in-out"
+          className="hover:text-green-700 transition-colors duration-300 ease-in-out"
         >
           {title}
         </a>

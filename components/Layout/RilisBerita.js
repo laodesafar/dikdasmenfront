@@ -40,7 +40,7 @@ export default function RilisBerita() {
 
   return (
     <div>
-      <h2 className="text-2xl capitalize font-semibold my-4 md:mt-10 md:mb-5 lg:text-3xl text-green-500 ">
+      <h2 className="text-2xl capitalize font-semibold my-4 md:mt-10 md:mb-5 lg:text-3xl text-gray-600 ">
         Rilis Berita
       </h2>
 

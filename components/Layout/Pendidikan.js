@@ -18,10 +18,8 @@ export default function Pendidikan() {
           <div className=" w-8/12"></div>
           <div className="w-full flex flex-col h-48 xl:h-80 ml-10">
             <div>
-              <h1 className="font-semibold text-gray-700  leading-none text-2xl mt-1 mb-5 capitalize ">
-                <a href="#" className=" hover:text-green-500">
-                  Pendidikan
-                </a>
+              <h1 className="font-semibold text-gray-600  leading-none text-3xl mt-1 mb-5 capitalize ">
+                Pendidikan
               </h1>
 
               <div className="max-w-full">

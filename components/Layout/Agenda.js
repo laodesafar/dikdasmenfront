@@ -14,7 +14,7 @@ export default function Agenda() {
       <div className="container mx-auto px-10 md:px-0 rounded-lg  py-6   ">
         <div className="grid grid-col-1 md:grid-cols-3  md:px-0">
           <div className="md:col-span-2 flex flex-col md:mr-4">
-            <h1 className=" capitalize text-2xl py-4 font-semibold text-green-500">
+            <h1 className=" capitalize text-2xl py-4 font-semibold text-gray-600">
               Pengumuman
             </h1>
             <div className=" h-44 relative bg-black ">
@@ -34,25 +34,31 @@ export default function Agenda() {
             </div>
             <div className="grid grid-col-1 md:grid-cols-3 mt-4 gap-2">
               <div className="flex flex-row justify-center shadow-md  mb-2">
-                <div className="p-4 flex-grow  text-gray-600 font-light overflow-hidden md:overflow-visible bg-gray-100 h-20 md:h-auto lg:min-h-[8rem]">
-                  <div>18 Agustus 2021</div>
-                  <h3 className="text-green-500 font-medium  mt-2 ">
+                <div className="p-4 flex-grow  text-gray-700 font-light overflow-hidden md:overflow-visible bg-gray-100 h-20 md:h-auto lg:min-h-[8rem]">
+                  <div className="text-gray-400 text-sm font-normal mt-4">
+                    18 Agustus 2021
+                  </div>
+                  <h3 className="text-green-500 cursor-pointer hover:text-green-700 font-medium  mt-2 transition-colors duration-300 ease-in-out">
                     Lowongan Guru PAI SD Islam Sultan Agung 2
                   </h3>
                 </div>
               </div>
               <div className="flex flex-row justify-center shadow-md  mb-2">
                 <div className="p-4 flex-grow  text-gray-600 font-light overflow-hidden md:overflow-visible bg-gray-100 h-20 md:h-auto lg:min-h-[8rem]">
-                  <div>18 Agustus 2021</div>
-                  <h3 className="text-green-500 font-medium  mt-2 ">
+                  <div className="text-gray-400 text-sm font-normal mt-4">
+                    18 Agustus 2021
+                  </div>
+                  <h3 className="text-green-500 cursor-pointer hover:text-green-700 font-medium  mt-2 transition-colors duration-300 ease-in-out">
                     Lowongan Guru PAI SD Islam Sultan Agung 2
                   </h3>
                 </div>
               </div>
               <div className="flex flex-row justify-center shadow-md  mb-2">
                 <div className="p-4 flex-grow  text-gray-600 font-light  overflow-hidden md:overflow-visible bg-gray-100 h-20 md:h-auto lg:min-h-[8rem]">
-                  <div>18 Agustus 2021</div>
-                  <h3 className="text-green-500 font-medium  mt-2 ">
+                  <div className="text-gray-400 text-sm font-normal mt-4">
+                    18 Agustus 2021
+                  </div>
+                  <h3 className="text-green-500 cursor-pointer hover:text-green-700 font-medium  mt-2 transition-colors duration-300 ease-in-out">
                     Lowongan Guru PAI SD Islam Sultan Agung 2
                   </h3>
                 </div>
@@ -74,7 +80,7 @@ export default function Agenda() {
             </div>
           </div>
           <div>
-            <h2 className=" capitalize text-2xl py-4 font-semibold text-green-500">
+            <h2 className=" capitalize text-2xl py-4 font-semibold text-gray-600">
               Agenda Mendatang
             </h2>
             <div className="flex flex-row shadow-md  mb-2">
@@ -83,7 +89,7 @@ export default function Agenda() {
                 <p className="text-yellow-300 text-2xl capitalize">Feb</p>
               </div>
               <div className="p-4 flex-grow text-gray-600 font-light text-sm bg-gray-100">
-                <h3 className="text-green-500 font-medium text-lg">
+                <h3 className="text-green-500 font-medium text-lg cursor-pointer hover:text-green-700 transition-colors duration-300 ease-in-out">
                   Workshop Parenting
                 </h3>
                 <div>
@@ -101,7 +107,7 @@ export default function Agenda() {
                 <p className="text-yellow-300 text-2xl capitalize">Feb</p>
               </div>
               <div className="p-4   flex-grow text-gray-600 font-light text-sm bg-gray-100">
-                <h3 className="text-green-500 font-medium text-lg">
+                <h3 className="text-green-500 font-medium text-lg cursor-pointer hover:text-green-700 transition-colors duration-300 ease-in-out">
                   Workshop Parenting
                 </h3>
                 <div>
@@ -119,7 +125,7 @@ export default function Agenda() {
                 <p className="text-yellow-300 text-2xl capitalize">Feb</p>
               </div>
               <div className="p-4  flex-grow text-gray-600 font-light text-sm bg-gray-100">
-                <h3 className="text-green-500 font-medium text-lg">
+                <h3 className="text-green-500 font-medium text-lg cursor-pointer hover:text-green-700 transition-colors duration-300 ease-in-out">
                   Workshop Parenting
                 </h3>
                 <div>
