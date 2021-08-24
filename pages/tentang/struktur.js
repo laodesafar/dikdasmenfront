@@ -5,6 +5,7 @@ import Navbar from "@components/Layout/Navbar";
 export default function StrukturOrganisasi() {
   return (
     <>
+      {" "}
       <Navbar />
       <Footer />
     </>

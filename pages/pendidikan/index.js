@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import Footer from "@components/Layout/Footer";
-import Navbar from "@components/Layout/Navbar";
-
 import { BiPlusCircle } from "react-icons/bi";
+import Navbar from "@components/Layout/Navbar";
+import Footer from "@components/Layout/Footer";
 
 const imageLoader = ({ src, width, quality }) => {
   return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
@@ -151,7 +150,6 @@ export default function Pendidikan() {
           </div>
         </div>
       </div>
-
       <Footer />
     </>
   );

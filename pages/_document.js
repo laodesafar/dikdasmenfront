@@ -20,7 +20,6 @@ class CustomDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <div id="overlay" />
         </body>
       </Html>
     );
