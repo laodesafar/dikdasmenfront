@@ -39,7 +39,7 @@ export default function CardTesti({
       }`}
     >
       <div
-        className={`flex items-center justify-center py-10 bg-green-500 rounded-l-md md:transition-transform duration-1000 ease-in-out ${
+        className={`flex items-center justify-center py-10 bg-green-500  md:transition-transform duration-1000 ease-in-out ${
           active !== `active${index}`
             ? "transform md:translate-x-60  "
             : "transform md:translate-x-0  "
@@ -54,7 +54,7 @@ export default function CardTesti({
           height={300}
         />
       </div>
-      <div className="flex flex-col p-7 justify-between bg-white min-h-[400px] py-10 col-span-2 z-10  rounded-r-lg ">
+      <div className="flex flex-col p-7 justify-between bg-white min-h-[400px] py-10 col-span-2 z-10 ">
         <div>
           <VscQuote className="mb-10" />
           <p className="font-normal text-base  text-gray-600  mb-4 max-h-36 overflow-hidden">

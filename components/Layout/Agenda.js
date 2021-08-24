@@ -11,7 +11,7 @@ const imageLoader = ({ src, width, quality }) => {
 export default function Agenda() {
   return (
     <section className="flex my-10 ">
-      <div className="container mx-auto px-10 md:px-0 rounded-lg  py-6   ">
+      <div className="container mx-auto px-10 md:px-0   py-6   ">
         <div className="grid grid-col-1 md:grid-cols-3  md:px-0">
           <div className="md:col-span-2 flex flex-col md:mr-4">
             <h1 className=" capitalize text-2xl py-4 font-semibold text-gray-600">
@@ -84,7 +84,7 @@ export default function Agenda() {
               Agenda Mendatang
             </h2>
             <div className="flex flex-row shadow-md  mb-2">
-              <div className="py-2 px-4  bg-green-500 flex flex-col items-center justify-center rounded-l-md ">
+              <div className="py-2 px-4  bg-green-500 flex flex-col items-center justify-center ">
                 <span className="text-white font-semibold text-3xl ">18</span>
                 <p className="text-yellow-300 text-2xl capitalize">Feb</p>
               </div>
@@ -102,7 +102,7 @@ export default function Agenda() {
               </div>
             </div>
             <div className="flex flex-row  mb-2 shadow-md">
-              <div className="py-2 px-4  bg-green-500 flex flex-col items-center justify-center rounded-l-md ">
+              <div className="py-2 px-4  bg-green-500 flex flex-col items-center justify-center  ">
                 <span className="text-white font-semibold text-3xl ">18</span>
                 <p className="text-yellow-300 text-2xl capitalize">Feb</p>
               </div>
@@ -120,7 +120,7 @@ export default function Agenda() {
               </div>
             </div>
             <div className="flex flex-row shadow-md ">
-              <div className="py-2 px-4  bg-green-500 flex flex-col items-center justify-center rounded-l-md ">
+              <div className="py-2 px-4  bg-green-500 flex flex-col items-center justify-center  ">
                 <span className="text-white font-semibold text-3xl ">18</span>
                 <p className="text-yellow-300 text-2xl capitalize">Feb</p>
               </div>

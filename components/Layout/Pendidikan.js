@@ -40,7 +40,7 @@ export default function Pendidikan() {
         </div>
 
         <div className="grid grid-cols-3 gap-6  relative">
-          <div className="card flex border-t-4 border-green-500  justify-center flex-col items-center bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow h-72">
+          <div className="card flex border-t-4 border-green-500  justify-center flex-col items-center bg-white  shadow-lg   h-72">
             <BiBuildings className="h-28 w-28 text-green-500" />
 
             <div className="p-6 text-center text-gray-700 ">
@@ -51,7 +51,7 @@ export default function Pendidikan() {
             </p>
           </div>
 
-          <div className="card flex border-t-4 border-green-500 justify-center flex-col items-center bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div className="card flex border-t-4 border-green-500 justify-center flex-col items-center bg-white shadow-lg  ">
             <BiGroup className="h-28 w-28 text-green-500" />
 
             <div className="p-6 text-center text-gray-700 ">
@@ -62,7 +62,7 @@ export default function Pendidikan() {
             </p>
           </div>
 
-          <div className="card flex border-t-4 border-green-500 justify-center flex-col items-center bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div className="card flex border-t-4 border-green-500 justify-center flex-col items-center bg-white l shadow-lg ">
             <BiUser className="h-28 w-28 text-green-500" />
 
             <div className="p-6 text-center text-gray-700 ">

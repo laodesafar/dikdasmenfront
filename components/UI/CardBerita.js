@@ -10,15 +10,9 @@ export default function CardBerita({
   ...infoPost
 }) {
   return (
-    <article className="bg-gray-100  rounded-md shadow-lg mt-4">
+    <article className="bg-gray-100   shadow-lg mt-4">
       <div className="hidden md:block ">
-        <Image
-          className="rounded-t-lg"
-          src={src}
-          alt={infoPost.title}
-          width={width}
-          height={height}
-        />
+        <Image src={src} alt={infoPost.title} width={width} height={height} />
       </div>
       <div className="py-4 px-6">
         <InforPost {...infoPost} />
