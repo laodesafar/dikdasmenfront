@@ -4,10 +4,7 @@ import ButtonLengkap from "@components/UI/ButtonLengkap";
 
 export default function Sambutan() {
   return (
-    <section
-      className="flex py-6 relative mt-24 xl:mt-64 bg-gradient-to-r from-gray-100 via-white  to-white"
-      id="sambutan"
-    >
+    <section className="flex py-6 relative mt-24 xl:mt-64 " id="sambutan">
       <div className="absolute left-0 w-full md:w-6/12 bg-gray-100 shadow-lg  z-10">
         <h1 className="text-center uppercase text-2xl py-4  font-semibold text-green-500">
           Sambutan Ketua Pendidikan
