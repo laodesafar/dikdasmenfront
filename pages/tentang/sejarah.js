@@ -1,12 +1,5 @@
-import Footer from "@components/Layout/Footer";
-import Navbar from "@components/Layout/Navbar";
-import React from "react";
+import Layout from "@components/Layout/Layout";
 
 export default function Sejarah() {
-  return (
-    <>
-      <Navbar />
-      <Footer />
-    </>
-  );
+  return <Layout></Layout>;
 }

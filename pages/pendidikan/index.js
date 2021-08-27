@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import { BiPlusCircle } from "react-icons/bi";
-import Navbar from "@components/Layout/Navbar";
-import Footer from "@components/Layout/Footer";
+import Layout from "@components/Layout/Layout";
 
 const imageLoader = ({ src, width, quality }) => {
   return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
@@ -74,8 +73,7 @@ export default function Pendidikan() {
   ]);
 
   return (
-    <>
-      <Navbar />
+    <Layout>
       <div className="relative text-right min-h-[500px] lg:h-[80vh] w-full left-[30%] max-w-[70%]  -z-10 ">
         <Image
           className="absolute z-0  "
@@ -150,7 +148,6 @@ export default function Pendidikan() {
           </div>
         </div>
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 }

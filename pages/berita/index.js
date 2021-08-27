@@ -2,14 +2,12 @@ import { useState } from "react";
 import Image from "next/image";
 import { BiTime, BiMap } from "react-icons/bi";
 
-import ButtonLengkap from "@components/UI/ButtonLengkap";
 import InforPost from "@components/Layout/InforPost";
+import Layout from "@components/Layout/Layout";
 
 const imageLoader = ({ src, width, quality }) => {
   return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
 };
-import Footer from "@components/Layout/Footer";
-import Navbar from "@components/Layout/Navbar";
 
 export default function Berita() {
   const [berita, setBerita] = useState([
@@ -96,8 +94,7 @@ export default function Berita() {
     },
   ]);
   return (
-    <>
-      <Navbar />
+    <Layout>
       <div className="container mx-auto px-10 md:px-0   py-6   ">
         <div className="grid grid-col-1 md:grid-cols-3  md:px-0 ">
           <div className="md:col-span-2 flex flex-col md:mr-4">
@@ -232,7 +229,6 @@ export default function Berita() {
           </div>
         </div>
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 }
