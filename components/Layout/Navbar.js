@@ -41,7 +41,7 @@ export default function Navbar() {
               }   lg:relative lg:block `}
             >
               <ul
-                className={`w-1/3 lg:w-auto fixed lg:absolute bg-gray-100 lg:bg-transparent transition-all duration-300 ease-in-out ${
+                className={`w-72 lg:w-auto fixed lg:absolute bg-gray-100 lg:bg-transparent transition-all duration-300 ease-in-out ${
                   showMenu ? "right-0" : "-right-full"
                 } top-0    bottom-0 lg:flex lg:space-x-10 lg:items-center pb-0 lg:px-0 px-10 pt-20 lg:mt-auto`}
               >
