@@ -4,6 +4,7 @@ import { BiTime, BiMap } from "react-icons/bi";
 
 import InforPost from "@components/Layout/InforPost";
 import Layout from "@components/Layout/Layout";
+import Hero from "@components/UI/hero";
 
 const imageLoader = ({ src, width, quality }) => {
   return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
@@ -95,6 +96,7 @@ export default function Berita() {
   ]);
   return (
     <Layout>
+      <Hero title="Rilis Berita Terbaru " />
       <div className="container mx-auto px-10 md:px-0   py-6   ">
         <div className="grid grid-col-1 md:grid-cols-3  md:px-0 ">
           <div className="md:col-span-2 flex flex-col md:mr-4">

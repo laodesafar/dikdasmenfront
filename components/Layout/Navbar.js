@@ -1,9 +1,9 @@
 import { Fragment, useState } from "react";
 import { Menu, Transition, Dialog } from "@headlessui/react";
 
+import Image from "next/image";
 import Link from "next/link";
 
-import Logo from "../UI/Logo";
 import { BiSearch, BiChevronDown, BiX, BiMenu } from "react-icons/bi";
 
 export default function Navbar() {
@@ -24,14 +24,43 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-green-500 w-full z-20 h-6"></div>
-      <nav className="sticky top-0 bg-white z-20 shadow-lg">
+      <div className="bg-green-500 w-full z-20 py-1">
+        <div className="container mx-auto">
+          <ul className="flex items-center mx-3 sm-mx-0">
+            <li className=" text-white mr-2">
+              <p className=" capitalize font-light text-xs">
+                <span className="text-xl font-bold">"</span> Bismillah membangun
+                generasi khaira ummah
+              </p>
+            </li>
+            <li className="ml-auto sm:block hidden">
+              <Link href="/berita">
+                <a className="text-white  text-sm  px-4 py-2 hover:bg-green-600 transition-colors">
+                  Berita
+                </a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav className="sticky top-0 bg-white z-20 shadow-lg ">
         <div className="container    mx-auto">
-          <div className="flex items-center ">
-            <div className=" py-3">
+          <div className="flex items-center mx-3 sm:mx-0">
+            <div className="py-1">
               <Link href="/">
-                <a>
-                  <Logo />
+                <a className="flex items-center hover:text-green-500 transition-colors text-gray-600">
+                  <Image src="/assets/images/logo.svg" height={63} width={58} />
+                  <div className="ml-2">
+                    <div className="sm:flex flex-col -space-y-2 font-semibold hidden ">
+                      <p className="uppercase">
+                        Bidang Pendidikan Dasar dan Menengah
+                      </p>
+                      <p>Yayasan Badan Wakaf Sultan Agung</p>
+                    </div>
+                    <p className="block sm:hidden font-semibold uppercase">
+                      Dikdasmen YBWSA
+                    </p>
+                  </div>
                 </a>
               </Link>
             </div>
@@ -65,7 +94,7 @@ export default function Navbar() {
                     leaveTo="transform opacity-0 scale-95"
                   >
                     <Menu.Items className="block lg:absolute mt-2 lg:mt-0 w-full lg:w-max min-w-[200px] outline-none border-green-500 border-t-2 lg:border-t-4 ">
-                      {tentangList.map(({ text, href }, i) => (
+                      {tentangList.map(({ text, href }) => (
                         <Menu.Item className="last:border-b-0" key={text}>
                           {({ active }) => (
                             <Link href={href}>
@@ -187,7 +216,7 @@ export default function Navbar() {
                 </Dialog>
               </Transition>
             </div>
-            <div className="mx-10 block lg:hidden cursor-pointer hover:text-green-500 transition-colors duration-300 ease-in-out">
+            <div className="ml-4 block lg:hidden cursor-pointer hover:text-green-500 transition-colors duration-300 ease-in-out">
               <a onClick={() => setShowMenu(!showMenu)}>
                 {showMenu ? (
                   <BiX className="text-2xl transition-all" />
