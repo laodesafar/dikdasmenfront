@@ -66,7 +66,12 @@ export default function Navbar() {
             <div className="py-1">
               <Link href="/">
                 <a className="flex items-center hover:text-green-500 transition-colors text-gray-600">
-                  <Image src="/assets/images/logo.svg" height={63} width={58} />
+                  <Image
+                    src="/assets/images/logo.svg"
+                    height={63}
+                    width={58}
+                    alt="Logo Dikdasmen"
+                  />
                   <div className="ml-2">
                     <div className="sm:flex flex-col -space-y-2 font-semibold hidden ">
                       <p className="uppercase">
@@ -91,12 +96,12 @@ export default function Navbar() {
                   showMenu ? "right-0" : "-right-full"
                 } top-0    bottom-0 lg:flex lg:space-x-10 lg:items-center pb-0 lg:px-0 px-10 pt-20 lg:mt-auto`}
               >
-                <div onClick={() => setShowMenu(!showMenu)}>
+                <li onClick={() => setShowMenu(!showMenu)}>
                   <BiX className="h-10 w-10 absolute lg:hidden  right-5 top-5 z-100 cursor-pointer hover:text-red-500 transition-colors duration-300 ease-in-out " />
-                </div>
+                </li>
                 {linkNavbar.map(({ text, href, dropdown }, i) => (
                   <Menu
-                    key={text}
+                    key={i}
                     as="li"
                     className="relative pb-3 mb-3 border-b-2 border-green-500 lg:border-none lg:pb-0 lg:mb-0"
                   >
