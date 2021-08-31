@@ -1,12 +1,5 @@
-import React from "react";
-import Footer from "@components/Layout/Footer";
-import Navbar from "@components/Layout/Navbar";
+import Layout from "@components/Layout/Layout";
 
 export default function Foto() {
-  return (
-    <>
-      <Navbar />
-      <Footer />
-    </>
-  );
+  return <Layout></Layout>;
 }

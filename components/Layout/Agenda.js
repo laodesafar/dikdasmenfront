@@ -1,12 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import { BiTime, BiMap } from "react-icons/bi";
 
 import ButtonLengkap from "@components/UI/ButtonLengkap";
-
-const imageLoader = ({ src, width, quality }) => {
-  return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
-};
+import Hero from "@components/UI/hero";
 
 export default function Agenda() {
   return (
@@ -17,25 +13,15 @@ export default function Agenda() {
             <h1 className=" capitalize text-2xl py-4 font-semibold text-gray-600">
               Pengumuman
             </h1>
-            <div className=" h-44 relative bg-black ">
-              <Image
-                className="opacity-60"
-                src="assets/images/contoh.jpg"
-                loader={imageLoader}
-                alt="Contoh Pengumuman"
-                objectFit="cover"
-                layout="fill"
-              />
-              <div className="relative left-6 top-1/2">
-                <h3 className="text-white text-2xl font-medium uppercase">
-                  Pengumuman Disini
-                </h3>
-              </div>
-            </div>
+            <Hero
+              title="Hasil Ujian Kenaikan Pangkat"
+              pengumuman
+              tanggal="29 Agustus 2021"
+            />
             <div className="grid grid-col-1 md:grid-cols-3 mt-4 gap-2">
               <div className="flex flex-row justify-center shadow-md  mb-2">
                 <div className="p-4 flex-grow  text-gray-700 font-light overflow-hidden md:overflow-visible bg-gray-100 h-20 md:h-auto lg:min-h-[8rem]">
-                  <div className="text-gray-400 text-sm font-normal mt-4">
+                  <div className="text-gray-400 text-sm font-normal md:mt-4">
                     18 Agustus 2021
                   </div>
                   <h3 className="text-green-500 cursor-pointer hover:text-green-700 font-medium  mt-2 transition-colors duration-300 ease-in-out">
@@ -45,7 +31,7 @@ export default function Agenda() {
               </div>
               <div className="flex flex-row justify-center shadow-md  mb-2">
                 <div className="p-4 flex-grow  text-gray-600 font-light overflow-hidden md:overflow-visible bg-gray-100 h-20 md:h-auto lg:min-h-[8rem]">
-                  <div className="text-gray-400 text-sm font-normal mt-4">
+                  <div className="text-gray-400 text-sm font-normal md:mt-4">
                     18 Agustus 2021
                   </div>
                   <h3 className="text-green-500 cursor-pointer hover:text-green-700 font-medium  mt-2 transition-colors duration-300 ease-in-out">
@@ -55,7 +41,7 @@ export default function Agenda() {
               </div>
               <div className="flex flex-row justify-center shadow-md  mb-2">
                 <div className="p-4 flex-grow  text-gray-600 font-light  overflow-hidden md:overflow-visible bg-gray-100 h-20 md:h-auto lg:min-h-[8rem]">
-                  <div className="text-gray-400 text-sm font-normal mt-4">
+                  <div className="text-gray-400 text-sm font-normal md: mt-4">
                     18 Agustus 2021
                   </div>
                   <h3 className="text-green-500 cursor-pointer hover:text-green-700 font-medium  mt-2 transition-colors duration-300 ease-in-out">

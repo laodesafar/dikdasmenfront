@@ -1,13 +1,10 @@
-import React from "react";
-import Footer from "@components/Layout/Footer";
-import Navbar from "@components/Layout/Navbar";
+import Layout from "@components/Layout/Layout";
+import Hero from "@components/UI/hero";
 
 export default function StrukturOrganisasi() {
   return (
-    <>
-      {" "}
-      <Navbar />
-      <Footer />
-    </>
+    <Layout>
+      <Hero title="Struktur Organisasi" />
+    </Layout>
   );
 }

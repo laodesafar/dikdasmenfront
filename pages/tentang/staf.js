@@ -1,12 +1,11 @@
-import Footer from "@components/Layout/Footer";
-import Navbar from "@components/Layout/Navbar";
+import Layout from "@components/Layout/Layout";
+import Hero from "@components/UI/hero";
 import React from "react";
 
 export default function StafDikdasmen() {
   return (
-    <>
-      <Navbar />
-      <Footer />
-    </>
+    <Layout>
+      <Hero title="Staf Dikdasmen" />
+    </Layout>
   );
 }

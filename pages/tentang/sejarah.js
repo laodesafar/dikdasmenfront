@@ -1,12 +1,10 @@
-import Footer from "@components/Layout/Footer";
-import Navbar from "@components/Layout/Navbar";
-import React from "react";
+import Layout from "@components/Layout/Layout";
+import Hero from "@components/UI/hero";
 
 export default function Sejarah() {
   return (
-    <>
-      <Navbar />
-      <Footer />
-    </>
+    <Layout>
+      <Hero title="Sejarah Dikdasmen YBWSA" />
+    </Layout>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
-import Footer from "@components/Layout/Footer";
-import Navbar from "@components/Layout/Navbar";
+
+import Layout from "@components/Layout/Layout";
 
 import Marker from "@components/Layout/Marker";
 import ButtonLengkap from "@components/UI/ButtonLengkap";
@@ -9,8 +9,7 @@ import ButtonLengkap from "@components/UI/ButtonLengkap";
 export default function Kontak(props) {
   const coordinates = { lat: -6.955534, lng: 110.458002 };
   return (
-    <>
-      <Navbar />
+    <Layout>
       <div className="container mx-auto">
         <h1 className="py-10 text-3xl font-bold uppercase text-green-500 text-center">
           Kontak Dikdasmen
@@ -67,7 +66,6 @@ export default function Kontak(props) {
           </form>
         </div>
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 }
