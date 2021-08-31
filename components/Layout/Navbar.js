@@ -4,15 +4,7 @@ import { Menu, Transition, Dialog } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
 
-import Logo from "../UI/Logo";
-import {
-  BiSearch,
-  BiChevronDown,
-  BiX,
-  BiMenu,
-  BiLinkAlt,
-} from "react-icons/bi";
-import link from "next/link";
+import { BiSearch, BiChevronDown, BiX, BiMenu } from "react-icons/bi";
 
 export default function Navbar() {
   const [showModal, setShowModal] = useState(false);
@@ -45,18 +37,6 @@ export default function Navbar() {
       text: "Kontak",
       href: "/kontak",
     },
-  ];
-
-  const tentangList = [
-    { text: "Sejarah", href: "/tentang/sejarah" },
-    { text: "Visi dan Misi", href: "/tentang/visimisi" },
-    { text: "Struktur Organisasi", href: "/tentang/struktur" },
-    { text: "Staf Dikdasmen", href: "/tentang/staf" },
-  ];
-
-  const galeriList = [
-    { text: "Foto", href: "/galeri/foto" },
-    { text: "Video", href: "/galeri/video" },
   ];
 
   return (
@@ -114,23 +94,23 @@ export default function Navbar() {
                 <div onClick={() => setShowMenu(!showMenu)}>
                   <BiX className="h-10 w-10 absolute lg:hidden  right-5 top-5 z-100 cursor-pointer hover:text-red-500 transition-colors duration-300 ease-in-out " />
                 </div>
-                {linkNavbar.map((link, i) => (
+                {linkNavbar.map(({ text, href, dropdown }, i) => (
                   <Menu
-                    key={link.text}
+                    key={text}
                     as="li"
                     className="relative pb-3 mb-3 border-b-2 border-green-500 lg:border-none lg:pb-0 lg:mb-0"
                   >
-                    {!link.dropdown && (
-                      <Link href={link.href}>
+                    {!dropdown && (
+                      <Link href={href}>
                         <a className="hover:text-green-500 py-6 transition-colors duration-300 ease-in-out">
-                          {link.text}
+                          {text}
                         </a>
                       </Link>
                     )}
-                    {link.dropdown && (
+                    {dropdown && (
                       <>
                         <Menu.Button className="hover:text-green-500 cursor-pointer lg:py-6 flex items-center transition-colors duration-300 ease-in-out outline-none">
-                          {link.text} <BiChevronDown />
+                          {text} <BiChevronDown />
                         </Menu.Button>
                         <Transition
                           as={Fragment}
@@ -142,7 +122,7 @@ export default function Navbar() {
                           leaveTo="transform opacity-0 scale-95"
                         >
                           <Menu.Items className="block lg:absolute mt-2 lg:mt-0 w-full lg:w-max min-w-[200px] outline-none border-green-500 border-t-2 lg:border-t-4 ">
-                            {link.dropdown.map(({ text, href }, i) => (
+                            {dropdown.map(({ text, href }, i) => (
                               <Menu.Item className="last:border-b-0" key={text}>
                                 {({ active }) => (
                                   <Link href={href}>
