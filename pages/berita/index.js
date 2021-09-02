@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Image from "next/image";
-import { BiTime, BiMap } from "react-icons/bi";
 
 import InforPost from "@components/Layout/InforPost";
 import Layout from "@components/Layout/Layout";
 import Hero from "@components/UI/hero";
+
+import SideBar from "@components/Layout/SideBar";
 
 const imageLoader = ({ src, width, quality }) => {
   return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
@@ -133,102 +134,7 @@ export default function Berita() {
             </div>
           </div>
 
-          <div className="px-2">
-            <div>
-              <h2 className=" capitalize text-2xl pt-4 font-semibold text-gray-600 mb-2">
-                Pengumuman
-              </h2>
-              <div className="flex flex-col">
-                <div className="border-b-[1px] border-gray-200 py-3">
-                  <h3 className="font-normal text-green-500 cursor-pointer hover:text-green-600 transition-colors duration-300 ease-in-out">
-                    Lowongan Guru PAI SD Islam Sultan Agung 2
-                  </h3>
-                  <p className="text-gray-400 font-normal text-xs">
-                    25 Agustus 2021
-                  </p>
-                </div>
-                <div className="border-b-[1px] border-gray-200 py-3">
-                  <h3 className="font-normal text-green-500 cursor-pointer hover:text-green-600 transition-colors duration-300 ease-in-out">
-                    Jadwal Kenaikan Pangkat di Undur Menjadi 25 September 2021
-                    Bertempat di SMA 1 Sultan Agung
-                  </h3>
-                  <p className="text-gray-400 font-normal text-xs">
-                    25 Agustus 2021
-                  </p>
-                </div>
-                <div className="border-b-[1px] border-gray-200 py-3">
-                  <h3 className="font-normal text-green-500 cursor-pointer hover:text-green-600 transition-colors duration-300 ease-in-out">
-                    Lowongan Guru PAI SD Islam Sultan Agung 2
-                  </h3>
-                  <p className="text-gray-400 font-normal text-xs">
-                    25 Agustus 2021
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h2 className=" capitalize text-2xl py-4 font-semibold text-gray-600 my-2">
-                Agenda Mendatang
-              </h2>
-              <div className="flex flex-row shadow-md  mb-2">
-                <div className="py-2 px-4  bg-green-500 flex flex-col items-center justify-center ">
-                  <span className="text-white font-semibold text-3xl ">18</span>
-                  <p className="text-yellow-300 text-2xl capitalize">Feb</p>
-                </div>
-                <div className="p-4 flex-grow text-gray-600 font-light text-sm bg-gray-100">
-                  <h3 className="text-green-500 font-medium text-lg cursor-pointer hover:text-green-700 transition-colors duration-300 ease-in-out">
-                    Workshop Parenting
-                  </h3>
-                  <div>
-                    <BiTime className="inline-block text-lg" /> 09.00 - 20.00
-                    Wib
-                  </div>
-                  <div>
-                    <BiMap className="inline-block text-lg" /> Aula SMA Islam
-                    Sultan Agung 1
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-row  mb-2 shadow-md">
-                <div className="py-2 px-4  bg-green-500 flex flex-col items-center justify-center ">
-                  <span className="text-white font-semibold text-3xl ">18</span>
-                  <p className="text-yellow-300 text-2xl capitalize">Feb</p>
-                </div>
-                <div className="p-4   flex-grow text-gray-600 font-light text-sm bg-gray-100">
-                  <h3 className="text-green-500 font-medium text-lg cursor-pointer hover:text-green-700 transition-colors duration-300 ease-in-out">
-                    Workshop Parenting
-                  </h3>
-                  <div>
-                    <BiTime className="inline-block text-lg" /> 09.00 - 20.00
-                    Wib
-                  </div>
-                  <div>
-                    <BiMap className="inline-block text-lg" /> Aula SMA Islam
-                    Sultan Agung 1
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-row shadow-md ">
-                <div className="py-2 px-4  bg-green-500 flex flex-col items-center justify-center ">
-                  <span className="text-white font-semibold text-3xl ">18</span>
-                  <p className="text-yellow-300 text-2xl capitalize">Feb</p>
-                </div>
-                <div className="p-4  flex-grow text-gray-600 font-light text-sm bg-gray-100">
-                  <h3 className="text-green-500 font-medium text-lg cursor-pointer hover:text-green-700 transition-colors duration-300 ease-in-out">
-                    Workshop Parenting
-                  </h3>
-                  <div>
-                    <BiTime className="inline-block text-lg" /> 09.00 - 20.00
-                    Wib
-                  </div>
-                  <div>
-                    <BiMap className="inline-block text-lg" /> Aula SMA Islam
-                    Sultan Agung 1
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <SideBar />
         </div>
       </div>
     </Layout>

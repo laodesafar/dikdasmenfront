@@ -24,7 +24,14 @@ export default function Hero({ title, pengumuman, tanggal }) {
         {pengumuman && (
           <div>
             <div className=" text-sm font-normal text-white">{tanggal}</div>
-            <h3 className="text-white  font-semibold uppercase text-2xl"></h3>
+            <h3 className="">
+              <a
+                href=""
+                className="text-white   font-semibold uppercase text-2xl hover:text-green-500"
+              >
+                {title}
+              </a>
+            </h3>
           </div>
         )}
         {!pengumuman && (
